@@ -48,11 +48,11 @@ function toggleDevice(btn) {
     if (isTurningOn) {
         btn.innerText = "ON";
         btn.classList.add("on");
-        if (icon) icon.src = `image/icon_${deviceId}_on.gif`;
+        if (icon) icon.src = `icon_${deviceId}_on.gif`;
     } else {
         btn.innerText = "OFF";
         btn.classList.remove("on");
-        if (icon) icon.src = `image/icon_${deviceId}_off.png`;
+        if (icon) icon.src = `icon_${deviceId}_off.png`;
     }
 }
 
@@ -60,4 +60,5 @@ function toggleDevice(btn) {
 function goHome() { window.location.href = "index.html"; }
 function goBedroom() { window.location.href = "bedroom.html"; }
 function goLiving() { window.location.href = "livingroom.html"; }
+
 function goKitchen() { window.location.href = "kitchen.html"; }
