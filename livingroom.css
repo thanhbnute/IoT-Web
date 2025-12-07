@@ -1,0 +1,126 @@
+/* DASHBOARD WRAPPER */
+.dashboard-wrapper {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    padding-top: 10px;
+}
+
+/* CHARTS COLUMN */
+.col-charts {
+    margin-top: 30px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(110, 185, 255, 0.1);
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid rgb(141, 213, 255)  ;
+}
+
+
+.chart-title {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.current-value {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.val-temp { color: #e74c3c; }
+.val-humid { color: #27ae60; }
+
+canvas {
+    width: 100% !important;
+    height: 170px !important;
+}
+
+.col-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 535px;  
+}
+
+.gauge-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light-gauge {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: conic-gradient(#ffc107 0% 75%, #e0e0e0 75% 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.light-gauge::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.light-text {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.device-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+}
+
+.device-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+}
+
+.dev-icon {
+    width: 90px;
+    height: 90px;
+}
+
+.btn-toggle {
+    width: 100px;
+    padding: 12px 0;
+    font-size: 18px;
+    border-radius: 8px;
+}

@@ -1,0 +1,79 @@
+.light-gauge-modern {
+    width: 320px;
+    height: 180px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.gauge-bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 160px 160px 0 0;
+    overflow: hidden;
+    background: conic-gradient(from 180deg at 50% 100%,
+        #1a2a44 0%, #2c3e50 15%, #34495e 25%, #f39c12 40%, #f1c40f 55%, 
+        #e67e22 70%, #e74c3c 85%, #c0392b 100%);
+}
+
+.gauge-fill {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%; height: 100%;
+    background: #309f71;
+    border-radius: 160px 160px 0 0;
+    clip-path: polygon(0 100%, 50% 100%, 50% 0%, 0 0%);
+    transition: clip-path 1s ease;
+}
+
+.gauge-pointer {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 6px;
+    height: 95px;
+    background: white;
+    transform: translateX(-50%) rotate(0deg);
+    transform-origin: bottom;
+    transition: transform 1s cubic-bezier(0.2, 0.8, 0.4, 1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    z-index: 10;
+}
+
+.gauge-pointer::after {
+    content: '';
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    background: #e74c3c;
+    border: 6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.9);
+}
+
+.gauge-center {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.current-lux { font-size: 40px; text-shadow: 0 3px 12px rgba(0,0,0,0.8); }
+.lux-unit { font-size: 18px; opacity: 0.9; }
+
+.gauge-labels {
+    position: absolute;
+    bottom: -65px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 15px;
+}

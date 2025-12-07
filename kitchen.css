@@ -1,0 +1,109 @@
+/* Copy từ bedroom.css, chỉ thay light -> gas */
+.dashboard-wrapper {
+    display: flex;
+    gap: 20px;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.col-charts {
+    margin-top: 30px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(110, 185, 255, 0.1);
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid rgb(141, 213, 255)  ;
+}
+
+.chart-title {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.current-value {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.val-temp { color: #2980b9; }
+.val-humid { color: #2980b9; }
+
+canvas {
+    width: 100% !important;
+    height: 170px !important;
+}
+
+.col-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 535px;
+}
+
+.gauge-container {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gas-gauge {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: conic-gradient(#e74c3c 0% 30%, #e0e0e0 30% 100%); /* Adjust theo % gas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.gas-gauge::before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background: #309f71;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.gas-text {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.device-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    align-items: center;
+}
+
+.device-item {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 0 15px;
+}
